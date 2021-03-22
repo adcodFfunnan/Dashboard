@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import { Header } from './app/Header'
 import { VerticalMenu } from './app/menu/Menu'
@@ -14,7 +14,12 @@ const App = () => {
                 <VerticalMenu />
                 <div className="headerAndBody">
                     <Header />
-                    <MainBodyForm />
+                    <Switch>
+                        <Route path="/">
+                            <MainBodyForm />
+                        </Route>
+                    </Switch>
+
                 </div>
             </Router>
 
