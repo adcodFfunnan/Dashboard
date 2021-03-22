@@ -1,0 +1,90 @@
+.header {
+    position: relative;
+    background-color: #27317D;
+    height:62px;
+    z-index: 1;
+    
+}
+.header > .logo {
+    margin-left:3.6em;
+}
+.header > .logo > img {
+    position: absolute;
+    height: 100%;
+}
+
+.header > .rightButtons {
+    float: right;
+    height: calc(100% - 2px);
+    display: flex;
+    flex-direction: row-reverse;
+    border:1px solid white;
+}
+
+.header > .rightButtons > .button {
+    background-color: #171D4B;
+    color:white;
+    color:#f2c417;
+    height: 100%;
+    padding: 0 2.5em;
+    display: flex;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    border-left:1px solid white;
+}
+
+.header > .rightButtons > .button:nth-child(3){
+    border-left: none;
+}
+
+.header > .rightButtons > .button.clicked {
+    background-color:#f2c417;
+    color:#3d4498;
+}
+
+.header > .rightButtons > .rightSidebar {
+    background-color: #888888;
+    position: fixed;
+    height: calc(100% - 64px);
+    top: 62px;
+    border: 1px solid white;
+    text-align: justify;
+    padding: 0 .5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 25%;
+    transition: width 1s;
+}
+
+.header > .rightButtons > .rightSidebar.hide {
+    width: 0%;
+    padding: 0;
+    animation: detachRightSidebar;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes detachRightSidebar {
+    from {}
+    to {visibility: hidden;}
+}
+
+
+@media only screen and (max-width:992px) {
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .header > .rightButtons > .rightSidebar {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .header > .rightButtons > .button {
+        padding: 0 1em;
+    }
+
+}

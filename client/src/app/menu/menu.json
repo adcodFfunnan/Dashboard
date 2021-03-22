@@ -1,0 +1,54 @@
+[
+  {
+    "label": "Item 1",
+    "url": "nekiURL1",
+    "children": []
+  },
+  {
+    "label": "Item 2",
+    "url": "nekiURL2",
+    "children": []
+  },
+  {
+    "label": "Item 3",
+    "url": "nekiURL3",
+    "children": [
+      {
+        "label": "SubMenu 1",
+        "url": "nekiURL3_1",
+        "children": []
+      },
+      {
+        "label": "SubMenu 2",
+        "url": "nekiURL3_2",
+        "children": [
+          {
+            "label": "SubSubMenu 1",
+            "url": "nekiURL3_2_1",
+            "children": []
+          },
+          {
+            "label": "SubSubMenu 2",
+            "url": "nekiURL3_2_2",
+            "children": []
+          },
+          {
+            "label": "SubSubMenu 3",
+            "url": "nekiURL3_2_3",
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "SubMenu 3",
+        "url": "nekiURL3_3",
+        "children": []
+      }
+    ]
+  },
+  {
+    "label": "Item 4",
+    "url": "nekiURL4",
+    "children": []
+  }
+]

@@ -1,0 +1,155 @@
+.verticalMenu{
+    padding: 0 1px;
+    background-color: #27317D;
+    overflow: hidden;
+    max-width: 30%;
+    transition: max-width 1s;
+    height:100%;
+    z-index:2;
+    flex-shrink: 0;
+}
+
+.verticalMenu.show{
+    animation:delayOverflow;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes delayOverflow {
+    from {overflow: hidden;}
+    to {overflow: visible;}
+}
+
+.verticalMenu.hide {
+    transition: max-width .5s;
+    overflow: hidden;
+    max-width: 0;
+}
+
+.verticalMenu > .FaBarsDiv  {
+    text-align: center;
+    border:1px solid #3d4498;
+    padding: 0.5em 0.5em;
+    background-color: inherit;
+}
+
+.verticalMenu.hide > .FaBarsDiv {
+    animation-name: faBarsDivPosition;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;  
+}
+@keyframes faBarsDivPosition {
+    from {position: relative;}
+    to {position:fixed; z-index:2;}
+}
+
+.verticalMenu > .FaBarsDiv > .FaBars {
+    cursor: pointer;
+}
+
+.menu > .menuLine > .menuItem {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer; 
+    text-align: center;
+    width: 100%;
+    background-color: inherit;
+}
+
+.menu > .menuLine > .menuItem > .navLink {
+    text-decoration: none;
+}
+
+.menu > .menuLine > .menuItem > .navLink > span {
+    display: block;
+    border:1px solid #3d4498;
+    border-top: 0px;
+    padding: 0.8em 1em;
+    white-space: nowrap;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color:#f2c417;
+}
+
+.menu > .menuLine > .menuItem > .navLink.navLinkSelected > span {
+    background-color:#f2c417;
+    color:#3d4498;
+}
+
+.menu > .menuLine > .subMenu {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    background-color: #27317D;
+}
+
+.subMenu > .menu > .menuLine > .menuItem > .navLink > span { 
+    border-left:0px;
+    padding: 0.8em 4em;
+}
+
+.menu > .menuLine > .menuItem > .navLink > span > .FaAngleDown {
+   position: absolute;
+   right:0.5em;
+   display: none;
+}
+
+.menu > .menuLine > .menuItem > .navLink > span > .FaAngleRight {
+    display: none;
+}
+
+.subMenu > .menu > .menuLine > .menuItem > .navLink > span > .FaAngleRight {
+    position: absolute;
+    right:0.5em;
+    display: inline-block;
+}
+
+
+
+.menu > .menuLine > .subMenu.hide {
+    display: none;
+}
+
+.menu > .menuLine > .menuItem:hover > .navLink > span {
+    border-top:1px solid;
+    border-left:1px solid;
+    border-color: #f2c417;
+    
+}
+
+@media only screen and (max-width:992px) {
+    .verticalMenu {
+        max-width: 100%;
+        position: fixed;
+        z-index: 2;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .menu > .menuLine > .subMenu {
+        display: block;
+        position: relative;
+    }
+
+    .menu > .menuLine > .menuItem > .navLink > span {
+        padding: 0.8em 3em;
+    }
+
+    .menu > .menuLine > .menuItem > .navLink > span > .FaAngleDown {
+        display: inline-block;
+    }
+
+    .subMenu > .menu > .menuLine > .menuItem > .navLink > span > .FaAngleRight {
+       display: none; 
+    }
+
+    .menu > .menuLine > .subMenu.hide {
+        display: block;
+    }
+
+    .menu > .menuLine > .subMenu.hideOnMobile {
+        display:none;
+    }
+}
+

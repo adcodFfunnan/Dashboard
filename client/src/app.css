@@ -1,0 +1,11 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main > .headerAndBody {
+    flex-grow: 1;
+  
+}

@@ -1,0 +1,184 @@
+.mainBodyForm{
+    margin:30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBodyForm > .stickers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainBodyForm > .stickers > .sticker {
+    position: relative;
+    width: 23%;
+    background-color: #27317D;
+    border:2px solid white; 
+    display: flex;
+    flex-direction: row;
+}
+
+.mainBodyForm > .stickers  > .sticker > div:nth-child(1) {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 30%;
+    align-self: flex-start;
+}
+
+.mainBodyForm > .stickers > .sticker > div:nth-child(1) > img {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top:5%;
+    left:5%;
+}
+
+.mainBodyForm > .stickers > .sticker > div:nth-child(2) {
+    position: relative;
+    overflow-wrap: break-word;
+    display: inline-block;
+    vertical-align: top;
+    background-color: inherit;
+    width: 68%;
+    border-left:2px solid white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+    color:#f2c417;
+    color:white;
+}
+
+.mainBodyForm > .stickers > .sticker > div:nth-child(2) > h3 {
+    margin:.5em 0 0 .3em;
+}
+
+.mainBodyForm > .stickers > .sticker > div:nth-child(2) > p {
+    margin:.5em .3em .5em .3em;
+}
+
+.mainBodyForm > .formDiv {
+    margin-top: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    border:1px solid #ced4da;
+}
+
+.mainBodyForm > .formDiv > .header {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ced4da;
+}
+
+.mainBodyForm > .formDiv > .header > p {
+    margin:0;
+    margin-left: 0.5rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mainBodyForm > .formDiv > form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em;
+}
+
+.mainBodyForm > .formDiv > form > .FormGroup {
+    width: 23%;
+}
+
+.mainBodyForm > .formDiv > form > .formButton {
+    flex-basis: 100%;
+    margin-top:1em;
+}
+
+.mainBodyForm > .formDiv > form > .formButton > input {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.formButton > input:focus {
+    outline: none;
+    box-shadow: 0px 0px 4px 2px #edb100;
+}
+
+.mainBodyForm > .formDiv > form > .formButton > input:hover {
+    background-color: #edb100;
+}
+
+.mainBodyForm > .formDiv > form > .FormGroup > label {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.mainBodyForm > .formDiv > form > .FormGroup > label > input, textarea {
+    display: block;
+    width: calc(100% - 1.5rem);
+    height: calc(1.8em + 1px);
+    padding: .15rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin:.25rem 0 .5rem 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+textarea {
+    height: calc(100% - 18px - 1.3rem);
+}
+
+.mainBodyForm > .formDiv > form > .FormGroup > label > input:focus, textarea:focus {
+    box-shadow: 0px 0px 4px 2px #007bff;
+    outline: none;
+    border: none;
+}
+
+textarea::placeholder,input::placeholder {
+    color:#6c757d;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+@media only screen and (max-width:992px) {
+
+    .mainBodyForm {
+        flex-direction: row-reverse;
+        margin-top:92px;
+    }
+
+    .mainBodyForm > .stickers {
+        flex-direction: column;
+        width: 45%;
+        margin-left:1em;
+    }
+
+    .mainBodyForm > .stickers > .sticker {
+        width: 100% !important;
+    }
+
+    .mainBodyForm > .formDiv {
+        margin-top: 2px;
+        width: 55%;
+    }
+
+    .mainBodyForm > .formDiv > form {
+        margin: 2em .2em;
+    }
+
+
+    .mainBodyForm > .formDiv > form > .FormGroup {
+        width: 48%;
+    }
+
+}
